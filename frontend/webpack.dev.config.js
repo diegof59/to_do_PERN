@@ -7,19 +7,19 @@ module.exports = {
     path: path.resolve(__dirname, '/dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        use: 'babel-loader',
         exclude: /node_modules/,
-        options: {
-          presets: ['@babel/env', '@babel/react']
-        }
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },
@@ -28,9 +28,8 @@ module.exports = {
       template: './src/index.html'
     })
   ],
+  mode: 'development',
   devServer: {
-    host: '0.0.0.0',
-    disableHostCheck: true, // To develop from cloud
     port: 9000,
   },
   devtool: 'eval-source-map'

@@ -1,6 +1,6 @@
 
-
-# create database to_do_pern;
+-- create role dev with createdb with password '5995';
+-- create database to_do_pern;
 
 create table to_do(
   to_do_id SERIAL PRIMARY KEY,

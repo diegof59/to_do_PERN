@@ -12,7 +12,7 @@
     "postgres",
     "rest"
   ],
-  "author": "diegof95",
+  "author": "diegof59",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
